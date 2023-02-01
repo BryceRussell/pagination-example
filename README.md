@@ -1,3 +1,3 @@
-# pagination-example
+# @astro-bryceguy/pagination Example
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/github-pot44t)
+[View on StackBlitz](https://stackblitz.com/edit/github-pot44t)
