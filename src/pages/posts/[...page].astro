@@ -1,0 +1,40 @@
+---
+import { Paginate, Pagination, Breadcrumb } from 'astro-headless-ui';
+import Layout from '../../Layout.astro';
+
+const posts = await fetch('https://jsonplaceholder.typicode.com/posts')
+const json = await posts.json()
+
+const { page: pageNumber } = Astro.params
+
+console.log("Page Number: ", pageNumber||1)
+---
+
+<Layout page={pageNumber}>
+	<nav class="breadcrumb">
+		<Breadcrumb />
+	</nav>
+	<Paginate data={json} size="3" page={pageNumber}>
+		{ page => <>
+			{ page.data.map(post => (
+				<article>
+					<h3>{post.title}</h3>
+					<p><strong>{post.id}</strong> - {post.body}</p>
+				</article>
+			))}
+			<nav class="pagination">
+				<Pagination index url="/posts" total={page.last} current={page.current}>
+
+				</Pagination>
+			</nav>
+			<nav class="split-link">
+				<a href="/posts/999" class="error-link">Test error page</a>
+				<a href="/code" style="align-self:flex-end;">Check out the code</a>
+			</nav>
+		</>}
+		<main slot="error">
+			<h1>This page does not exist!</h1>
+			<a href="/posts">Back</a>
+		</main>
+	</Paginate>
+</Layout>

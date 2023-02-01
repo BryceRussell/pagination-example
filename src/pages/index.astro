@@ -1,0 +1,23 @@
+---
+import Layout from "../Layout.astro";
+---
+
+<Layout>
+    <h1>Astro SSR Pagination Example</h1>
+    <p>This demo uses <a href="https://github.com/BryceRussell/astro-headless-ui">astro-headless-ui</a>’s <code>&lt;Paginate&gt;</code>, <code>&lt;Pagination&gt;</code>, and <code>&lt;Breadcrumb&gt;</code> components</p>
+    <ul>
+        <p><strong>Features</strong>:</p>
+        <li>Paginate data in SSR, (similar to SSG's <code>paginate()</code> function from <code>getStaticPaths()</code>)</li>
+        <li>Include index on paginated route</li>
+        <li>Compatible with customizable link navigation for pages</li>
+        <li>Use a slot function as a render template for pages</li>
+        <li>Use a page numer as a named slot to target a page for alternative render</li>
+        <li>Render an 'error' slot when viewing page numbers that dont exist</li>
+        <li>Breadcrumb for easy backwards navigation</li>
+    </ul>
+    <a href="/posts" class="button">Demo</a>
+    <br>
+    <a href="https://github.com/BryceRussell/astro-headless-ui/wiki/Paginate" class="button">Documentation</a>
+    <br>
+    <a href="/code" class="button">Code Example</a>
+</Layout>

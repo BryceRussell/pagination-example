@@ -11,8 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astro-bryceguy/pagination": "^2.0.0",
-    "@astrojs/netlify": "^1.1.0",
-    "astro": "^1.4.2"
+    "@astrojs/netlify": "^2.1.1",
+    "astro": "^2.0.5",
+    "astro-headless-ui": "^0.0.24"
   }
 }
