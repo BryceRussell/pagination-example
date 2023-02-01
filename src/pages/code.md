@@ -22,7 +22,7 @@ const json = await posts.json()
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <title>Page {pageNumber||1}</title>
+        <title>{pageNumber?`Page ${pageNumber}`:'Pagination Example'}</title>
     </head>
     <body>
         <nav class="breadcrumb">

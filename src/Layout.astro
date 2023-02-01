@@ -12,7 +12,7 @@ const {
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
-        <title>Page :{Astro.props.page||1}</title>
+        <title>Page {Astro.props.page||1}</title>
     </head>
     <body style={url?'align-items:flex-start':null}>
         {url && <a href="/posts" style="align-self:flex-start;">Back</a>}
