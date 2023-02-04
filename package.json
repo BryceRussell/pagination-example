@@ -8,8 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "netlify-post-build": "cat _redirects >> dist/_redirects"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/netlify": "^2.1.1",

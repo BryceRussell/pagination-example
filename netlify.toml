@@ -3,5 +3,5 @@
   functions = "netlify/functions"
   publish = "dist"
 
-[postbuild]
-  command = "npm run netlify-post-build"
+[[plugins]]
+    package = "/plugins/netlify-plugin-append-redirects"
