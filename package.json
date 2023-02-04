@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && while read line; do echo \"$line\" >> dist/_redirects; done < _redirects",
+    "build": "astro build && cat _redirects >> dist/_redirects",
     "preview": "astro preview",
     "astro": "astro"
   },
