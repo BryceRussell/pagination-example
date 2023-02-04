@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && cat _redirects >> dist/_redirects",
+    "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "redirects": "cat _redirects >> dist/_redirects"
   },
   "dependencies": {
     "@astrojs/netlify": "^2.1.1",
