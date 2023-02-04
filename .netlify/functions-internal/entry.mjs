@@ -4,7 +4,7 @@ import * as undici from 'undici';
 import { setTimeout as setTimeout$1, clearTimeout as clearTimeout$1 } from 'node:timers';
 import { builder } from '@netlify/functions';
 import { A as App, i as server_default, j as deserializeManifest } from './chunks/astro.dca053d4.mjs';
-import { _ as _page0, a as _page1, b as _page2 } from './chunks/pages/all.8bb7b55e.mjs';
+import { _ as _page0, a as _page1, b as _page2 } from './chunks/pages/all.e1e10c43.mjs';
 import 'path-to-regexp';
 import 'mime';
 import 'cookie';
