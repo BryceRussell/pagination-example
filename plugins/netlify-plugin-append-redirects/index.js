@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'node:fs';
 
 export const onPostBuild = function({ constants }) {
     fs.readFile('_redirect', 'utf8', (err, data) => {
