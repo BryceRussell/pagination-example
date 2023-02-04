@@ -4,4 +4,4 @@
   publish = "dist"
 
 [postbuild]
-  command = "npm run redirects"
+  command = "npm run netlify-post-build"
