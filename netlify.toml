@@ -1,9 +1,7 @@
 [build]
   command = "npm run build"
+  functions = "netlify/functions"
   publish = "dist"
-
-[functions]
-    directory = "dist/functions"
 
 [postbuild]
   command = "npm run redirects"
