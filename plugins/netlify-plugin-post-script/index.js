@@ -3,7 +3,7 @@ import { execSync } from 'node:child_process';
 
 export const onPostBuild = function(options) {
     console.log("Running: netlify-plugin");
-    const files = fs.readdirSync(__dirname)
+    const files = fs.readdirSync('/')
     console.log(files)
 
     var w = fs.createWriteStream("dist/_redirect", {flags: 'a'});
