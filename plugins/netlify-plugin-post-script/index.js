@@ -2,7 +2,7 @@ import fs from 'node:fs';
 
 export const onPostBuild = function() {
     console.log("Running: netlify-plugin")
-    const fileData = fs.readFile('/opt/build/repo/dist/_redirects', 'utf-8')
+    const fileData = fs.readFileSync('/opt/build/repo/dist/_redirects', 'utf-8')
     console.log(fileData)
     fs.readFile('/opt/build/repo/_redirects', 'utf-8', function (err, data) {
         if (err) throw err
