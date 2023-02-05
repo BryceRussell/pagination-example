@@ -1,4 +1,5 @@
 import { fs } from 'node:fs';
+import { execSync } from 'node:child_process';
 
 export const onPostBuild = function(options) {
     console.log("Running: netlify-plugin");
