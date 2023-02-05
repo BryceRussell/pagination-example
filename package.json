@@ -8,12 +8,12 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "post-build": "cat opt/build/repo/_redirect >> opt/build/repo/dist/_redirect"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/netlify": "^2.1.1",
     "astro": "^2.0.5",
-    "astro-headless-ui": "^0.0.24"
+    "astro-headless-ui": "^0.0.24",
+    "netlify-plugin-append-redirects": "^0.0.1"
   }
 }

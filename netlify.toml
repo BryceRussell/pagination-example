@@ -4,4 +4,4 @@
   publish = "dist"
 
 [[plugins]]
-    package = "/plugins/netlify-plugin-post-script"
+    package = "netlify-plugin-append-redirects"
