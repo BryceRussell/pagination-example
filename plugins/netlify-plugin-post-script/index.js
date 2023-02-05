@@ -5,8 +5,10 @@ export const onPostBuild = function(options) {
     console.log("Running: netlify-plugin");
 
     var w = fs.createWriteStream("/opt/build/repo/dist/_redirect", {flags: 'a'});
+    console.log(w)
 
     var r = fs.createReadStream("/opt/build/repo/_redirect");
+    console.log(r)
     
     w.on('close', function() {
         console.log("done writing");
