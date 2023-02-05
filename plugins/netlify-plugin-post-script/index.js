@@ -1,7 +1,17 @@
-import { execSync } from 'node:child_process';
+import { fs } from 'node:fs';
 
 export const onPostBuild = function(options) {
-    console.log("netlify-plugin-post-script: Attempting to run 'post-build' script")
-    console.log(JSON.stringify(options))
+    console.log("Running: netlify-plugin");
+
+    var w = fs.createWriteStream("dist/_redirect", {flags: 'a'});
+
+    var r = fs.createReadStream("_redirect");
+    
+    w.on('close', function() {
+        console.log("done writing");
+    });
+
+    r.pipe(w);
+
     execSync(`npm run post-build`);
 }
