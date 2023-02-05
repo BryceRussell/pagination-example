@@ -3,12 +3,10 @@ import { execSync } from 'node:child_process';
 
 export const onPostBuild = function(options) {
     console.log("Running: netlify-plugin");
-    const files = fs.readdirSync('/')
-    console.log(files)
 
-    var w = fs.createWriteStream("dist/_redirect", {flags: 'a'});
+    var w = fs.createWriteStream("/opt/build/repo/dist/_redirect", {flags: 'a'});
 
-    var r = fs.createReadStream("_redirect");
+    var r = fs.createReadStream("/opt/build/repo/_redirect");
     
     w.on('close', function() {
         console.log("done writing");
